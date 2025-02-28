@@ -1,0 +1,293 @@
+{
+	"info": {
+		"_postman_id": "283aaa50-381e-470e-bf4e-3c0e2364a4a4",
+		"name": "task_db_collections",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28621334",
+		"_collection_link": "https://speeding-sunset-151948.postman.co/workspace/task_data~6f735697-751c-4b98-8c50-f5d885f1c752/collection/28621334-283aaa50-381e-470e-bf4e-3c0e2364a4a4?action=share&source=collection_link&creator=28621334"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n    \"email\":\"kbsbjs@123gmail.com\",\r\n    \"password\":\"k123dcdc\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/auth/login",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "childtask",
+			"item": [
+				{
+					"name": "chiletaskCreate",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTUsImlhdCI6MTc0MDc2Mjg5OSwiZXhwIjoxNzQwNzY2NDk5fQ.9taqTZ7O20_hbUV6aKZJnahzkzAY1gjBpV9QjFbntNQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Setup this is chid task2\",\r\n  \"description\": \"Configure MySQL and Sequelize\",\r\n  \"status\": \"Pending\",\r\n  \"dueDate\": \"2024-03-10\",\r\n  \"priority\": \"Medium\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/tasks/childTask/create/2",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"tasks",
+								"childTask",
+								"create",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllchildTask",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTUsImlhdCI6MTc0MDc2Mjg5OSwiZXhwIjoxNzQwNzY2NDk5fQ.9taqTZ7O20_hbUV6aKZJnahzkzAY1gjBpV9QjFbntNQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Setup this is chid task2\",\r\n  \"description\": \"Configure MySQL and Sequelize\",\r\n  \"status\": \"Pending\",\r\n  \"dueDate\": \"2024-03-10\",\r\n  \"priority\": \"Medium\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/tasks/childTask/1/getAll",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"tasks",
+								"childTask",
+								"1",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "childUpdate",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTUsImlhdCI6MTc0MDc2Mjg5OSwiZXhwIjoxNzQwNzY2NDk5fQ.9taqTZ7O20_hbUV6aKZJnahzkzAY1gjBpV9QjFbntNQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Setup this is chid task2\",\r\n  \"description\": \"Configure MySQL and Sequelize\",\r\n  \"status\": \"Pending\",\r\n  \"dueDate\": \"2024-03-10\",\r\n  \"priority\": \"Medium\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/tasks/childTask/1/update/1",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"tasks",
+								"childTask",
+								"1",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "childDeleteTask",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTUsImlhdCI6MTc0MDc2Mjg5OSwiZXhwIjoxNzQwNzY2NDk5fQ.9taqTZ7O20_hbUV6aKZJnahzkzAY1gjBpV9QjFbntNQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Setup this is chid task2\",\r\n  \"description\": \"Configure MySQL and Sequelize\",\r\n  \"status\": \"Pending\",\r\n  \"dueDate\": \"2024-03-10\",\r\n  \"priority\": \"Medium\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/tasks/childTask/1/delete/2",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"tasks",
+								"childTask",
+								"1",
+								"delete",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "task",
+			"item": [
+				{
+					"name": "createTask",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTUsImlhdCI6MTc0MDc2Mjg5OSwiZXhwIjoxNzQwNzY2NDk5fQ.9taqTZ7O20_hbUV6aKZJnahzkzAY1gjBpV9QjFbntNQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"this is main2\",\r\n  \"description\": \"Finish all the pending tasks in the project\",\r\n  \"dueDate\": \"2024-03-10\",\r\n  \"priority\": \"High\",\r\n   \"status\": \"Pending\"\r\n  \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/tasks/create",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"tasks",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request Copy",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "New Request Copy 2",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
